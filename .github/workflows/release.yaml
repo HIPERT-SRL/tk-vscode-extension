@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master  # Run this workflow on push to the master branch
+  workflow_dispatch:
 
 jobs:
   build:
