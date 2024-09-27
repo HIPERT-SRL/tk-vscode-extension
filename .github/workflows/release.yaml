@@ -51,6 +51,6 @@ jobs:
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./*.vsix  # Ensure the correct path to the .vsix file
+          asset_path: "*.vsix"  # Ensure the correct path to the .vsix file
           asset_name: tk.vsix  # Name of the .vsix file
           asset_content_type: application/octet-stream
