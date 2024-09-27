@@ -32,6 +32,8 @@ jobs:
       - name: Package VSIX
         run: vsce package
 
+      - name: List files in workspace after packaging
+        run: ls -la
       # Create a release and upload the .vsix file
       - name: Create GitHub Release
         id: create_release
@@ -50,5 +52,5 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./*.vsix  # Ensure the correct path to the .vsix file
-          asset_name: my-extension.vsix  # Name of the .vsix file
+          asset_name: tk.vsix  # Name of the .vsix file
           asset_content_type: application/octet-stream
