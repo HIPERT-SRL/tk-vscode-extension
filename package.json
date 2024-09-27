@@ -20,7 +20,7 @@
     "commands": [
       {
         "command": "tk.helloWorld",
-        "title": "tk format"
+        "title": "TK VSCode Check"
       }
     ],
     "keybindings": [
